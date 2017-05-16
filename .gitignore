@@ -1,0 +1,91 @@
+#!/bin/bash
+
+
+echo "Sei da portatile?"
+echo "1) Si"
+echo "2) No"
+read Input
+
+if [ $Input -eq 1 ]
+then
+
+controllo="si"
+while[ "$controllo" = "si"]; do
+
+	clear	
+	echo "1)Processi"
+	echo "2)Consumo batteria"
+	echo "3)Utilizzo CPU e RAM"
+	echo "4Spazio di archiviazione"
+	echo 
+	echo "Scegli un'opzione"
+	read scelta
+	case $scelta in
+		1)
+			ps -A
+			echo
+			echo "Continuare si/no"
+			read controllo
+			;;
+		2)
+			cat/proc/acpi/battery/BAT0/info:
+			echo
+			echo "Continuare si/no"
+			read controllo
+			;;
+		3)
+		    ps -Ao user,comm,pcpu
+		    echo
+		    echo "Continuare si/no"
+	        read controllo
+			;;
+		4)
+		    df -ha
+			echo
+		    echo "Continuare si/no"
+	        read controllo
+			;;
+		5)
+			controllo="no"
+			;;
+		*) echo "Opzione no valida"
+	esac
+done
+			
+else
+controllo="si"
+while[ "$controllo" = "si"]; do
+
+	clear	
+	echo "1)Processi"
+	echo "2)Utilizzo CPU e RAM"
+	echo "3)Spazio di archiviazione"
+	echo 
+	echo "Scegli un'opzione"
+	read scelta
+	case $scelta in
+		1)
+			ps -A
+			echo
+			echo "Continuare si/no"
+			read controllo
+			;;
+		2)
+		    ps -Ao user,comm,pcpu
+		    echo
+		    echo "Continuare si/no"
+	        read controllo
+			;;
+		3)
+		    df -ha
+			echo
+		    echo "Continuare si/no"
+	        read controllo
+			;;
+		4)
+			controllo="no"
+			;;
+		*) echo "Opzione no valida"
+	esac
+done
+fi
