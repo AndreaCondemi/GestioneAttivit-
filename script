@@ -10,7 +10,7 @@ if [ $Input -eq 1 ]
 then
 
 controllo="si"
-while[ "$controllo" = "si"]; do
+while[ "$controllo" = "si" ]; do
 
 	clear	
 	echo "1)Processi"
@@ -54,7 +54,7 @@ done
 			
 else
 controllo="si"
-while[ "$controllo" = "si"]; do
+while[ "$controllo" = "si" ]; do
 
 	clear	
 	echo "1)Processi"
