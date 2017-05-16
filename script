@@ -16,7 +16,8 @@ while [ "$controllo" = "si" ]; do
 	echo "1)Processi"
 	echo "2)Consumo batteria"
 	echo "3)Utilizzo CPU e RAM"
-	echo "4Spazio di archiviazione"
+	echo "4)Spazio di archiviazione"
+	echo "5)Esci"
 	echo 
 	echo "Scegli un'opzione"
 	read scelta
@@ -60,6 +61,7 @@ while [ "$controllo" = "si" ]; do
 	echo "1)Processi"
 	echo "2)Utilizzo CPU e RAM"
 	echo "3)Spazio di archiviazione"
+	echo "4)Esci"
 	echo 
 	echo "Scegli un'opzione"
 	read scelta
